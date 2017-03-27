@@ -1,5 +1,10 @@
-def find_second(s,p):
-    start_=s.find(p)
-    final_=s.find(p,start_+1)
-    return final_
-print find_second('hello mama i love mama','mama')
+def friend(a):
+    if a[:1]=='D':
+        return True
+    if a[:1]=='N':
+        return True
+    return False
+print friend('Diablo')
+print friend('Ned')
+print friend('Frederick')
+
