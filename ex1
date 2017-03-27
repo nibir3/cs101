@@ -1,27 +1,5 @@
-def get_next_target(s):
-    start_link=s.find('< a href=')
-    start_quote=s.find('"',start_link)
-    end_quote=s.find('"',start_quote+1)
-    url=s[start_quote+1:end_quote]
-    return url,end_quote
-print get_next_target('cbdbicbabc cbudbcdsbcdsc budsbcbsubcdsc uybcdyucbdsu bcudscbb < a href="www.udacity.com"');
-def inc(n):
-    return n+1
-print inc(5)
-def sum(a,b):
-    a=a+b
-    return a
-print sum(5,6)
-def square(a):
-    return a*a
-print square(5)
-def sum(a,b,c):
-    c=a+b+c
-    return c
-print sum(1,2,4)
-def abbaize(s,p):
-    s=s+p+p+s
-    return s
-print abbaize('hello','world')
-    
-
+def find_second(s,p):
+    start_=s.find(p)
+    final_=s.find(p,start_+1)
+    return final_
+print find_second('hello mama i love mama','mama')
