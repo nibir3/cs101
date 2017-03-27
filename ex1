@@ -1,7 +1,7 @@
 def friend(a):
-    if a[:1]=='D':
+    if a[0]=='D':
         return True
-    if a[:1]=='N':
+    if a[0]=='N':
         return True
     return False
 print friend('Diablo')
