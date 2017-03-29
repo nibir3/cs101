@@ -53,4 +53,5 @@ def crawl_web(seed):
             union(tocrawl,get_all_links(content))
             crawled.append(page)
     return index
+
         

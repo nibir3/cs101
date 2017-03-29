@@ -1,0 +1,27 @@
+def make_hashtable(nbuckets):
+    table=[]
+    for unused in range(0,nbuckets):
+        table.append([])
+    return table
+def hash_string(keyword,buckets):
+    h=0
+    for e in keyword:
+        h=(h+ord(e))%buckets
+    return h
+def hashtable_get_bucket(htable,keyword):
+    return htable[hash_string(keyword,len(htable))]
+def hastable_update(htable,key,value):
+    bucket=hashtable_get_bucket(htable,key)
+    for e in bucket:
+        if e[0]==key:
+            e[1]=value
+            return
+    bucket.append([key,value])
+def hashtable_lookup(htable,keyword):
+    bucket=hashtable_get_bucket(htable,keyword)
+    for e in bucket:
+        if e[0]==key:
+            return e[1]
+    return None
+    
+        
