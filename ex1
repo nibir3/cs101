@@ -1,7 +1,7 @@
-def get_page(page):
+def get_page(url):
     try:
         import urllib
-        return urllib.urlopen(url).read()
+        return urllib.request.urlopen(url).read()
     except:
         return ""
 def get_next_target(page):
